@@ -9,7 +9,7 @@
 #
 # more details at https://ownyourbits.com
 
-BRANCH=master
+BRANCH=1.15.0
 #DBG=x
 
 set -e$DBG
@@ -31,7 +31,7 @@ apt-get update
 apt-get install --no-install-recommends -y wget ca-certificates sudo
 
 pushd "$TMPDIR"
-wget -qO- --content-disposition https://github.com/nextcloud/nextcloudpi/archive/"$BRANCH"/latest.tar.gz \
+wget -qO- --content-disposition https://codeload.github.com/j4nf4b3l/nextcloudpi/tar.gz/v\"$BRANCH" \
   | tar -xz \
   || exit 1
 cd - && cd "$TMPDIR"/nextcloudpi-"$BRANCH"
